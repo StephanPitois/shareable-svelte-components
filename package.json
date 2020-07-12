@@ -20,7 +20,7 @@
     "src",
     "dist"
   ],
-  "description": "*Psst — looking for an app template? Go here --> [sveltejs/template](https://github.com/sveltejs/template)*",
+  "description": "Shareable Svelte Components",
   "version": "1.0.0",
   "dependencies": {},
   "repository": {
