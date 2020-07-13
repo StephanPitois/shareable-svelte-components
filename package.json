@@ -24,7 +24,7 @@
     "dist"
   ],
   "description": "Shareable Svelte Components",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "dependencies": {
     "rollup-plugin-babel": "^4.4.0"
   },
