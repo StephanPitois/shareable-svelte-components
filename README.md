@@ -1,8 +1,8 @@
-*Psst — looking for an app template? Go here --> [sveltejs/template](https://github.com/sveltejs/template)*
+# Shareable Svelte Components
 
----
+Experimental / Sandbox. Do no use.
 
-# Based on sveltejs/component-template
+## Based on sveltejs/component-template
 
 https://github.com/sveltejs/component-template
 
