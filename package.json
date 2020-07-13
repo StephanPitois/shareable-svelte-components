@@ -1,5 +1,5 @@
 {
-  "name": "shareable-svelte-components",
+  "name": "@spitois/shareable-svelte-components",
   "svelte": "src/index.js",
   "module": "dist/index.mjs",
   "main": "dist/index.js",
@@ -21,7 +21,7 @@
     "dist"
   ],
   "description": "Shareable Svelte Components",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "dependencies": {},
   "repository": {
     "type": "git",
