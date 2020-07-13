@@ -21,7 +21,7 @@
     "dist"
   ],
   "description": "Shareable Svelte Components",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "dependencies": {},
   "repository": {
     "type": "git",
