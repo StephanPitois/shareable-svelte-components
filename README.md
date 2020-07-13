@@ -1,6 +1,6 @@
 # Shareable Svelte Components
 
-Experimental / Sandbox. Do no use.
+**Experimental / Sandbox. Do no use.**
 
 ## Based on sveltejs/component-template
 
