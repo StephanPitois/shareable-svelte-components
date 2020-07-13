@@ -11,7 +11,8 @@ export default {
 	input: 'src/index.js',
 	output: [
 		{ file: pkg.module, 'format': 'es' },
-		{ file: pkg.main, 'format': 'umd', name }
+		{ file: pkg.main, 'format': 'umd', name },
+		{ file: 'dist/shareable-svelte-components.min.js', format: 'iife', name }
 	],
 	plugins: [
 		svelte(),
