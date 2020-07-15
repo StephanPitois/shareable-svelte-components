@@ -19,6 +19,12 @@
         visible = value;
     };
 
+    function handleKeydown(event) {
+        if (visible && event.key === "Escape") {
+            visible = false;
+        }
+    }
+
     // Events
     const dispatch = createEventDispatcher();
 </script>
@@ -38,7 +44,13 @@
     top: 0;
     right: 1rem;
 }
+.multiple-choice-option:active {
+    background: #333;
+    color: #fff;
+}
 </style>
+
+<svelte:window on:keydown={handleKeydown} />
 
 {#if visible}
 <div
@@ -52,20 +64,26 @@
         {#each possibleAnswers as possibleAnswer}
         <li class="bb b--light-silver {highlightedAnswerId === possibleAnswer.id ? 'bg-near-white' : ''}">
             <a  href="#0"
-                class="w-100 pv3 ph4 f5 link dim dib {highlightedAnswerId === possibleAnswer.id ? 'gray b' : 'gray'}"
+                class="multiple-choice-option w-100 pv3 ph4 f5 link dim dib {highlightedAnswerId === possibleAnswer.id ? 'gray b' : 'gray'}"
                 on:click|preventDefault={() => {
-                    visible = false;
-                    dispatch('answerSelected', {
-                        selectedAnswerId: possibleAnswer.id,
-                        selectedAnswerText: possibleAnswer.text
-                    });
+                    setTimeout(() => {
+                        visible = false;
+                        dispatch('answerSelected', {
+                            selectedAnswerId: possibleAnswer.id,
+                            selectedAnswerText: possibleAnswer.text
+                        });
+                    }, 250);
                 }}>{possibleAnswer.text}</a>
         </li>
         {/each}
         <li class="b--light-silver">
             <a  href="#0"
-                class="w-100 pv3 ph4 f5 link dim dib gray b"
-                on:click|preventDefault={() => visible = false}>Cancel</a>
+                class="multiple-choice-option w-100 pv3 ph4 f5 link dim dib gray b"
+                on:click|preventDefault={() => {
+                    setTimeout(() => {
+                        visible = false;
+                    }, 250);
+                }}>Cancel</a>
         </li>
     </ul>
 </div>
